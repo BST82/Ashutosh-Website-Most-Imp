@@ -11,16 +11,16 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class AppComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-  
-  title = 'meAndMyPandit';
-  async ngOnInit() {
+
+  ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const AOS = await import('aos');
-      AOS.init({
-        duration: 1200,
-        once: true,
-        easing: 'ease-in-out',
-        offset: 100
+      import('aos').then(AOS => {
+        AOS.init({
+          duration: 1200,
+          once: true,
+          easing: 'ease-in-out',
+          offset: 100
+        });
       });
     }
   }
