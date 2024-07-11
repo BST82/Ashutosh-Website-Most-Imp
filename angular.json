@@ -8,7 +8,16 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "architect": {
+        "build": {
+          "options": {
+            "allowedCommonJsDependencies": [
+              "aos"
+            ]
+          }
         }
+      }
       },
       "root": "",
       "sourceRoot": "src",
@@ -32,9 +41,14 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
-            "scripts": [],
+            "scripts": [
+               "node_modules/aos/dist/aos.js", 
+  "node_modules/jquery/dist/jquery.min.js",
+ "node_modules/aos/dist/aos.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
