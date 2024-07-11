@@ -14,6 +14,13 @@
           "options": {
             "allowedCommonJsDependencies": [
               "aos"
+            ],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
+            ],
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
             ]
           }
         }
