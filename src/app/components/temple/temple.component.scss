@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
   background: rgba(220, 227, 16, 0.3);
+
+  img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+  }
 }
 
 .cards {
@@ -17,13 +23,16 @@
   grid-gap: 1rem;
 }
 
-
 /* Screen larger than 600px? 2 columns */
 @media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Screen larger than 900px? 3 columns */
 @media (min-width: 900px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
