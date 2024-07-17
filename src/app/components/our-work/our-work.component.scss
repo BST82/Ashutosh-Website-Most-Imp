@@ -1,0 +1,80 @@
+$primary-color: #ffffff;
+$background-image: url('/assets/homeImages/lotus.jpg');
+$max-width: 1200px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background-image: $background-image;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; // Ensure full viewport height
+  width: 100%;
+  padding: 20px;
+  overflow: hidden; // Prevent overflow
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.6); // Semi-transparent background for readability
+    border-radius: 10px;
+    color: $primary-color;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: $max-width;
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; // Adjust padding for smaller screens
+
+    .content {
+      width: 100%;
+      padding: 15px; // Adjust padding for smaller screens
+    }
+  }
+
+  h1 {
+    font-size: 1.5em; // Adjust font size for smaller screens
+  }
+
+  p {
+    font-size: 1em; // Adjust font size for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 10px; // Further adjust padding for very small screens
+
+    h1 {
+      font-size: 1.2em; // Further adjust font size for very small screens
+    }
+
+    p {
+      font-size: 0.9em; // Further adjust font size for very small screens
+    }
+  }
+}
