@@ -1,0 +1,100 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$premium-color: #e74c3c;
+$hover-bg-color: #f1c40f;
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    margin: 20px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    &:hover {
+      background-color: $hover-bg-color;
+      transform: scale(1.05);
+    }
+    
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .features {
+      font-size: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .button {
+      background-color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .basic {
+    border-color: $primary-color;
+    background-color: #77ebc6;
+  }
+
+  .free {
+    border-color: $secondary-color;
+    background-color: #d877eb;
+  }
+
+  .premium {
+    border-color: $premium-color;
+    background-color: #f69fd3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+}
