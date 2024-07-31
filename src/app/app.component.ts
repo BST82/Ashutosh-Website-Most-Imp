@@ -7,11 +7,12 @@ import { BenefitsComponent } from "./components/benefits/benefits.component";
 import { SubscriptionComponent } from "./components/subscription/subscription.component";
 import { OurWorkComponent } from "./components/our-work/our-work.component";
 import { ContactFormComponent } from "./components/contact-form/contact-form.component";
+import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeSectionComponent, RouterLink, TempleComponent, SanskarComponent, BenefitsComponent, SubscriptionComponent, OurWorkComponent, ContactFormComponent],
+  imports: [RouterOutlet, HomeSectionComponent, RouterLink, TempleComponent, SanskarComponent, BenefitsComponent, SubscriptionComponent, OurWorkComponent, ContactFormComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
