@@ -8,10 +8,11 @@ import { SubscriptionComponent } from "../subscription/subscription.component";
 import { OurWorkComponent } from "../our-work/our-work.component";
 import { BenefitsComponent } from "../benefits/benefits.component";
 import { TempleComponent } from "../temple/temple.component";
+import { WhatWeOfferServicesComponent } from "../what-we-offer-services/what-we-offer-services.component";
 @Component({
   selector: 'app-home-section',
   standalone: true,
-  imports: [NgOptimizedImage, RouterOutlet, SanskarComponent, SubscriptionComponent, OurWorkComponent, BenefitsComponent, TempleComponent],
+  imports: [NgOptimizedImage, RouterOutlet, SanskarComponent, SubscriptionComponent, OurWorkComponent, BenefitsComponent, TempleComponent, WhatWeOfferServicesComponent],
   templateUrl: './home-section.component.html',
   styleUrls: ['./home-section.component.scss'] // corrected 'styleUrl' to 'styleUrls'
 })
