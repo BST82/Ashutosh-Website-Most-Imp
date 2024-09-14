@@ -9,6 +9,7 @@
   justify-content: center;
   background: rgba(220, 227, 16, 0.3);
 
+
   img {
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
@@ -17,10 +18,12 @@
 }
 
 .cards {
+
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;
+  margin-top: 30px;
 }
 
 /* Screen larger than 600px? 2 columns */
