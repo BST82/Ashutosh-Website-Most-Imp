@@ -7,11 +7,25 @@ import { Observable } from 'rxjs';
 })
 export class GeoLocationService {
 
-  private apiUrl = 'https://ipapi.co/json/'; // API URL
-
-  constructor(private http: HttpClient) { }
-
-  getUserLocation(): Observable<any> { // Explicitly declare the return type as Observable
-    return this.http.get(this.apiUrl); // Use the apiUrl to make the request
+  getUserLocation(): Observable<{latitude: number, longitude: number}> {
+    return new Observable(observer => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const coords = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            };
+            observer.next(coords);
+            observer.complete();
+          },
+          (error) => {
+            observer.error(error);
+          }
+        );
+      } else {
+        observer.error('Geolocation not supported');
+      }
+    });
   }
 }
