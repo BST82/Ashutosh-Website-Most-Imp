@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-show-pages-based-on-user',
   standalone: true,
-  imports: [HttpClientModule, CommonModule],
+  imports: [CommonModule],
   templateUrl: './show-pages-based-on-user.component.html',
   styleUrls: ['./show-pages-based-on-user.component.scss']
 })
@@ -13,29 +13,39 @@ export class ShowPagesBasedOnUserComponent implements OnInit {
 
   location: any = { latitude: null, longitude: null, city: 'Loading...' };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object // Inject platformId to check environment
+  ) { }
 
   ngOnInit(): void {
     this.getUserLocation();
   }
 
-  // Use HTML5 Geolocation API to get the user's coordinates
+  // Use HTML5 Geolocation API to get the user's coordinates, but only in the browser
   getUserLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          this.location.latitude = position.coords.latitude;
-          this.location.longitude = position.coords.longitude;
-          this.getCityFromCoordinates(this.location.latitude, this.location.longitude);
-        },
-        (error) => {
-          console.error('Error getting location:', error);
-          this.location.city = 'Error retrieving location';
-        }
-      );
+    if (isPlatformBrowser(this.platformId)) {
+      // The code inside this block will only run in the browser
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            this.location.latitude = position.coords.latitude;
+            this.location.longitude = position.coords.longitude;
+            this.getCityFromCoordinates(this.location.latitude, this.location.longitude);
+          },
+          (error) => {
+            console.error('Error getting location:', error);
+            this.location.city = 'Error retrieving location';
+          }
+        );
+      } else {
+        console.error('Geolocation is not supported by this browser.');
+        this.location.city = 'Geolocation not supported';
+      }
     } else {
-      console.error('Geolocation is not supported by this browser.');
-      this.location.city = 'Geolocation not supported';
+      // Code executed during server-side rendering (SSR)
+      console.warn('Navigator is not available on the server.');
+      this.location.city = 'Server-side rendering';
     }
   }
 
