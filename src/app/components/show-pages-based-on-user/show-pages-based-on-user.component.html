@@ -1,11 +1,11 @@
 <div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">User Location</h1>
+    <!-- <h1 class="text-2xl font-bold mb-4">User Location</h1> -->
   
     <div class="bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-xl font-semibold">Current Location</h2>
+      <!-- <h2 class="text-xl font-semibold">Current Location</h2> -->
   
       <div class="mt-4">
-        <p class="text-gray-700">
+        <!-- <p class="text-gray-700">
           <strong>Latitude:</strong> 
           <span *ngIf="location.latitude">{{ location.latitude }}</span>
           <span *ngIf="!location.latitude">Fetching latitude...</span>
@@ -15,20 +15,14 @@
           <strong>Longitude:</strong> 
           <span *ngIf="location.longitude">{{ location.longitude }}</span>
           <span *ngIf="!location.longitude">Fetching longitude...</span>
-        </p>
+        </p> -->
   
-        <p class="text-gray-700">
-          <strong>City:</strong> 
-          <span *ngIf="location.city">{{ location.city }}</span>
+        <div class="text-gray-700">
+          <h1 class="text-2xl ">Book Pandits for  <span *ngIf="location.city" class="text-red-900 font-bold">{{ location.city }}</span></h1>
           <span *ngIf="!location.city">Fetching city...</span>
-        </p>
+        </div>
       </div>
     </div>
   
-    <div class="mt-6">
-      <p class="text-sm text-gray-500">
-        Your location details are fetched using HTML5 Geolocation and Nominatim (OpenStreetMap) for reverse geocoding.
-      </p>
-    </div>
   </div>
   
