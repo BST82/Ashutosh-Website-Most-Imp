@@ -1,13 +1,13 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+<nav class="bg-[#ffcc00] border-gray-200 dark:bg-gray-900 dark:border-gray-700">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="assets/navmenu.jpg" class="h-8" alt="Me And My Pandit Logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">9429120733</span>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">9555867871</span>
     </a>
     <button
       (click)="toggleNavbar()"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#ffcc00] dark:focus:ring-gray-600"
       aria-controls="navbar-dropdown"
       aria-expanded="false">
       <span class="sr-only text-blue-500">Open main menu</span>
@@ -16,7 +16,7 @@
       </svg>
     </button>
     <div [class.hidden]="!isNavbarOpen" class="w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#FAA300] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#ffcc00] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li *ngFor="let link of headerLinks" class="relative">
           <ng-container *ngIf="!link.subMenu">
             <a [routerLink]="link.link" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{ link.label }}</a>
@@ -28,13 +28,20 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
               </svg>
             </button>
-            <div [class.hidden]="!isDropdownOpen" class="dropdown-menu absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <div [class.hidden]="!isDropdownOpen" class="dropdown-menu absolute left-0 mt-2 z-10 font-normal bg-[#ffcc00] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
                 <li *ngFor="let subLink of link.subMenu">
-                  <a [routerLink]="subLink.link" class="block px-4 py-2">{{ subLink.label }}</a>
+                  <a 
+                    [routerLink]="subLink.link"
+                    (click)="toggleDropdown()"
+                    [ngClass]="{'bg-white text-black': activeLink === subLink.link}"
+                    (click)="setActiveLink(subLink.link)"
+                    class="block px-4 py-2">
+                    {{ subLink.label }}
+                  </a>
                 </li>
               </ul>
-            </div>
+            </div>            
           </ng-container>
         </li>
       </ul>

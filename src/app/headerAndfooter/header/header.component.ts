@@ -12,11 +12,12 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   isNavbarOpen = false;
   isDropdownOpen = false;
+  activeLink: string | null = null;
 
   headerLinks = [
     { label: 'Home', link: '/' },
-    { 
-      label: 'City', 
+    {
+      label: 'City',
       subMenu: [
         { label: 'Bangalore', link: '/cities/bangalore' },
         { label: 'Banarash', link: '/cities/banarash' },
@@ -28,7 +29,7 @@ export class HeaderComponent {
         { label: 'Pune', link: '/cities/pune' },
         { label: 'Mumbai', link: '/cities/mumbai' },
         { label: 'Hydrabad', link: '/cities/hydrabad' },
-      ] 
+      ]
     },
     { label: 'Services', link: '/services' },
     { label: 'Pricing', link: '/pricing' },
@@ -43,6 +44,11 @@ export class HeaderComponent {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
+  setActiveLink(link: string) {
+    this.activeLink = link;
+    this.toggleDropdown(); // Close dropdown after selecting a submenu item
+  }
+
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event) {
     const clickedElement = event.target as HTMLElement;
@@ -55,3 +61,4 @@ export class HeaderComponent {
     }
   }
 }
+
