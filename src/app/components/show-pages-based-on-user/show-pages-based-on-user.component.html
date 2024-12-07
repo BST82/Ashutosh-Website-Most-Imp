@@ -6,21 +6,17 @@
 
       <div class="mt-4">
         <div class="text-gray-800">
-          <h1 class="text-2xl md:text-3xl lg:text-3xl font-semibold">
+          <h1 class="text-xl lg:text-3xl font-semibold">
             Book Pandits for 
             <span *ngIf="location.city" class="text-white font-bold pr-2">{{ location.city }}</span>call us
               <!-- Phone Number with clickable link and hover effect -->
               <a 
               href="tel:9555867871" 
-              class="text-3xl md:text-3xl lg:text-3xl font-extrabold mt-2 text-white hover:text-black transition-colors duration-300"
+              class="text-xl lg:text-3xl font-extrabold mt-2 text-white hover:text-black transition-colors duration-300"
             >
              +91 9555867871
             </a>
           </h1>
-
-        
-
-
           <span *ngIf="!location.city" class="text-gray-600">Fetching city...</span>
         </div>
       </div>
@@ -28,10 +24,7 @@
       <!-- Placeholder for namaste logo with increased size -->
       <img src="assets/logoo3.png" 
      alt="Namaste Logo" 
-     class="w-[80vw] h-[40vh] sm:w-[30vw] sm:h-[20vh] lg:w-[100vw] lg:h-[80vh] " />
-
-
-
+     class="w-[100vw] h-[40vh] sm:w-[100vw] sm:h-[80vh] lg:w-[100vw] lg:h-[80vh] " />
     </div>
   </div>
 </div>
