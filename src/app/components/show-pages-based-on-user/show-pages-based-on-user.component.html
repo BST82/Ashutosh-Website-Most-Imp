@@ -1,39 +1,29 @@
-<div class="container mx-auto pt-4 pb-4">
+<div class="container-full mx-auto pb-4">
   <!-- <h1 class="text-2xl font-bold mb-4">User Location</h1> -->
 
-  <div class="bg-[#ffcc00] shadow-lg rounded-lg p-6 md:p-8 text-center">
+  <div class="bg-[#d64300] shadow-lg  p-6 md:p-8 text-center">
     <div class="flex flex-col items-center justify-center space-y-4">
       <!-- Placeholder for namaste logo with increased size -->
-      <img src="assets/NamasteIcon.png" alt="Namaste Logo" class="w-16 md:w-20 lg:w-24" />
+      <img src="assets/NamasteIcon.png" 
+     alt="Namaste Logo" 
+     class="w-[80vw] h-[40vh] sm:w-[60vw] sm:h-[40vh] lg:w-[80vw] lg:h-[50vh] mx-auto" />
+
 
       <div class="mt-4">
-        <!-- <p class="text-gray-700">
-          <strong>Latitude:</strong> 
-          <span *ngIf="location.latitude">{{ location.latitude }}</span>
-          <span *ngIf="!location.latitude">Fetching latitude...</span>
-        </p>
-
-        <p class="text-gray-700">
-          <strong>Longitude:</strong> 
-          <span *ngIf="location.longitude">{{ location.longitude }}</span>
-          <span *ngIf="!location.longitude">Fetching longitude...</span>
-        </p> -->
-
         <div class="text-gray-800">
           <h1 class="text-2xl md:text-3xl lg:text-4xl font-semibold">
             Book Pandits for 
-            <span *ngIf="location.city" class="text-[#8B0000] font-bold">{{ location.city }}</span>
+            <span *ngIf="location.city" class="text-white font-bold">{{ location.city }}</span>
           </h1>
 
-          <!-- Phone Number Highlighted -->
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mt-2 text-[#8B0000]">
+          <!-- Phone Number with clickable link and hover effect -->
+          <a 
+            href="tel:9555867871" 
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold mt-2 text-white hover:text-black transition-colors duration-300"
+          >
             9555867871
-          </h1>
+          </a>
 
-          <!-- Slogan -->
-          <p class="text-lg md:text-xl lg:text-2xl font-medium text-gray-700 mt-2">
-            Call us on this number to make your day at your doorstep
-          </p>
 
           <span *ngIf="!location.city" class="text-gray-600">Fetching city...</span>
         </div>

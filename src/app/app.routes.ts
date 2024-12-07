@@ -17,6 +17,16 @@ export const routes: Routes = [
     loadChildren: () => import('./cities/citi-modules/citi-modules.module')
       .then(mod => mod.CitiModulesModule)
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./features/features/features.module')
+      .then(mod => mod.FeaturesModule)
+  },
+  {
+    path: 'pricing',
+    loadChildren: () => import('./features/features/features.module')
+      .then(mod => mod.FeaturesModule)
+  },
   // other routes
 ];
 

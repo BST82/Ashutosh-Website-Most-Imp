@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
+email:String="meAndmyPandit@gmail.com"
 
 }
