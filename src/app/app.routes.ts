@@ -8,7 +8,7 @@ export const routes: Routes = [
       .then(mod => mod.ComponentsModulesModule)
   },
   {
-    path: 'services',
+    path: '',
     loadChildren: () => import('./features/features/features.module')
       .then(mod => mod.FeaturesModule)
   },
@@ -17,16 +17,7 @@ export const routes: Routes = [
     loadChildren: () => import('./cities/citi-modules/citi-modules.module')
       .then(mod => mod.CitiModulesModule)
   },
-  {
-    path: 'contact',
-    loadChildren: () => import('./features/features/features.module')
-      .then(mod => mod.FeaturesModule)
-  },
-  {
-    path: 'pricing',
-    loadChildren: () => import('./features/features/features.module')
-      .then(mod => mod.FeaturesModule)
-  },
+
   // other routes
 ];
 
