@@ -10,8 +10,10 @@ import { AhmedabadComponent } from '../ahmedabad/ahmedabad.component';
 import { PuneComponent } from '../pune/pune.component';
 import { MumbaiComponent } from '../mumbai/mumbai.component';
 import { HydrabadComponent } from '../hydrabad/hydrabad.component';
+import { CityComponent } from '../city/city.component';
 
 const routes: Routes = [
+  { path: 'cities', component: CityComponent },
   { path: 'bangalore', component: BangaloreComponent },
   { path: 'delhi', component: DelhiComponent },
   { path: 'banarash', component: BanarashComponent },

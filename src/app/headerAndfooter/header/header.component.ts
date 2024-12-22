@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FeaturesModule } from '../../features/features/features.module';
 
 @Component({
   selector: 'app-header',
@@ -32,7 +33,9 @@ export class HeaderComponent {
       ]
     },
     { label: 'Services', link: '/services' },
-    { label: 'Pricing', link: '/pricing' },
+    // { label: 'Book-Pandit', link: '/book-pandit' },
+    { label: 'Blog', link: '/blog' },
+    { label: 'E-Puja', link: '/e-puja' },
     { label: 'Contact', link: '/contact' }
   ];
 

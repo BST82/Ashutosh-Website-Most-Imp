@@ -5,8 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactFormComponent } from '../../components/contact-form/contact-form.component';
 
 const routes: Routes = [
-  { path: '', component: AboutourworkComponent  }, 
-  { path: 'contact', component: ContactFormComponent },
+  { path: 'about', component: AboutourworkComponent  }, 
 ];
 
 

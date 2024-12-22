@@ -1,0 +1,98 @@
+.slider-container {
+  height: 600px;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+}
+
+.slider-item {
+  flex: 0 0 100%;
+}
+
+.slider-container button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.slider-container button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.slider-container .prev-button {
+  left: 10px;
+}
+
+.slider-container .next-button {
+  right: 10px;
+}
+
+/* Dots Styling */
+.slider-container .indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-container .indicator div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-container .indicator div.active {
+  background-color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    height: 400px;
+  }
+
+  .slider-container button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .slider-container .indicator div {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    height: 300px;
+  }
+
+  .slider-container button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .slider-container .indicator {
+    gap: 6px;
+  }
+
+  .slider-container .indicator div {
+    width: 6px;
+    height: 6px;
+  }
+}

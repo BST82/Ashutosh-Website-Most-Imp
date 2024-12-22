@@ -30,3 +30,22 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.card-hover {
+    transition: background-color 0.8s ease; /* Smooth transition for background color */
+}
+
+.card-hover:hover {
+    background-color: rgba(255, 0, 0, 0.3); /* Transparent orange color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.card-hover2 {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-hover2:hover {
+    background-color: rgba(0, 0, 255, 0.2); /* Transparent blue color */
+    cursor: pointer;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}

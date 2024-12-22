@@ -1,20 +1,33 @@
-<div class="container">
-    <!-- <div class="card" data-aos="flip-up"> -->
-    <div class="card" >
-        <h1 class="text-2xl font-bold">A Path to Inner Peace</h1>
-        <p>As a priest dedicated to offering pooja path services, I strive to bring peace and spiritual well-being to those seeking divine connection. Pooja is a sacred ritual that helps cleanse the mind and soul, inviting positive energy and tranquility into our lives. It is more than just a tradition; it strengthens our relationship with the divine, fosters inner peace, and brings balance to our thoughts and emotions.</p>
-    </div>
-    <div class="card" >
-        <img ngOptimizedImage src="assets/homeImages/1stImage.jpeg" alt="Description of image" loading="lazy" class="imageeffect">
+<div class="container flex flex-col md:flex-row gap-8">
+    <!-- Card 1 -->
+    <div 
+    class="card card-hover p-6 bg-white shadow-lg rounded-lg  " 
+    (click)="navigateToPage()">
+      <h1 class="text-2xl font-bold">Best pandit service in your cities</h1>
+      <p class="mt-2 text-gray-700">
+          Any kind of puja path in your city with genuine price we are providing best pandit service for navvarsh puja,
+          grahpravesh, marriage, namkaran, mundan sanskar, jaap, etc. Our pandit have well knowledge about any kind of
+          puja path. We are providing very knowledgeable priests.
+      </p>
+  </div>
+  
+    
+    
+    
+
+    <!-- Card 2 -->
+    <div class="card p-6 bg-white shadow-lg rounded-lg flex flex-col items-center hover:shadow-xl hover:scale-105 transition duration-300">
+        <img ngOptimizedImage src="assets/homeImages/1stImage.jpeg" alt="Description of image" loading="lazy" class="imageeffect rounded-lg mb-4">
         <span id="phone-number" class="text-2xl pt-4 font-bold text-black">
             Call us: 
             <a href="tel:+919555867871" 
-               class="text-red-800 hover:text-black  hover:bg-yellow-400 font-bold text-2xl px-2 py-1 rounded transition duration-300">
+               class="text-red-800 hover:text-black hover:bg-yellow-400 font-bold text-2xl px-2 py-1 rounded transition duration-300">
               +91 9555867871
             </a>
-          </span>    
+        </span>    
     </div>
 </div>
+
 
 <div class="container">
     <div class="card" >
@@ -27,14 +40,13 @@
             </a>
           </span>    
     </div>
-    <div class="card" >
-        <h1 class="text-2xl font-bold">Sacred Practices of Temple Worship: Rituals, Pooja, and Divine Connection</h1>
-        <p class="pt-2">Temple worship is a sacred practice in Hinduism, symbolizing devotion and connection to the divine. Visiting a temple involves purification of the mind and body, often through bathing and wearing clean clothes. Devotees remove their shoes before entering the temple as a sign of respect.
-
-            Inside the temple, the devotee offers prayers and performs rituals, often lighting lamps, offering flowers, and chanting mantras. The central focus is on the deity's idol, where one can offer fruits, sweets, and milk as part of the pooja (ritual worship). Priests guide the rituals, offering blessings and distributing prasadam (blessed food).
-            </p>
-           
+    <div class="card card-hover2" (click)="navigateToAnotherPage()">
+        <h1 class="text-2xl font-bold">Book pandit for puja</h1>
+        <p class="pt-2">
+            आपके शहर में सभी प्रकार की पूजा पाथ के लिए संपर्क करे नववर्ष की पूजा, ग्रहप्रवेश की पूजा, विवाह(शादी) की पूजा सभी प्रकार के जाप हवन. हम ज्ञानी और विद्वान पंडितों को उपलब्ध कराते है.
+        </p>
     </div>
+    
    
 </div>
 
@@ -54,3 +66,96 @@
           </span>    
     </div>
 </div>
+
+
+<div class="relative flex flex-col justify-between h-full max-w-7xl px-10 mx-auto xl:px-0 mt-3 mb-5">
+    <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Shubh Muhurats in January 2025</h2>
+    <p class="mb-12 text-lg text-gray-500">Find below the auspicious timings and reasons for performing various rituals in January 2025.</p>
+    <div class="w-full">
+        <div class="flex flex-col w-full mb-10 sm:flex-row">
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Pratipada Tithi</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase">Date: 1st January 2025 (Wednesday)</p>
+                        <p class="mb-2 text-gray-600">Time: 6:23 AM to 8:45 AM</p>
+                        <p class="mb-2 text-gray-600">Reason: Starting the year with Puja on Shukla Paksha Pratipada is auspicious.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Sankashti Chaturthi</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase">Date: 9th January 2025 (Thursday)</p>
+                        <p class="mb-2 text-gray-600">Time: Moonrise at 8:21 PM (for Chaturthi vrat puja).</p>
+                        <p class="mb-2 text-gray-600">Reason: Ganesha Puja on Sankashti removes obstacles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col w-full mb-5 sm:flex-row">
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Ekadashi Tithi</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">Date: 11th January 2025 (Saturday)</p>
+                        <p class="mb-2 text-gray-600">Time: 7:06 AM to 1:42 PM</p>
+                        <p class="mb-2 text-gray-600">Reason: Putrada Ekadashi is one of the most auspicious days for worshiping Lord Vishnu, which promises to be a good day for children and prosperity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Makar Sankranti</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase">Date: 15th January 2025 (Wednesday)</p>
+                        <p class="mb-2 text-gray-600">Puja Time: 7:15 AM to 12:30 PM</p>
+                        <p class="mb-2 text-gray-600">Reason: The transition of the Sun into Capricorn is an excellent time for Surya Puja and offering prayers for abundance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
+                    <div class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Purnima Tithi</h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">Date: 25th January 2025 (Saturday)</p>
+                        <p class="mb-2 text-gray-600">Time: 6:50 AM to 10:30 PM</p>
+                        <p class="mb-2 text-gray-600">Reason: Magha Purnima is considered auspicious for doing Satyanarayana Puja, Ganga Snan, and donating for the sake of attaining good karma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2">
+            <div class="relative h-full ml-0 md:mr-10">
+                <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+                <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                    <div class="flex items-center -mt-1">
+                        <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">Shatabhisha Nakshatra</h3>
+                    </div>
+                    <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">Date: 28th January 2025 (Tuesday)</p>
+                    <p class="mb-2 text-gray-600">Time: 10:15 AM to 1:40 PM</p>
+                    <p class="mb-2 text-gray-600">Reason: Shatabhisha Nakshatra and Shukla Paksha are an auspicious time for doing all types of Puja.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   
