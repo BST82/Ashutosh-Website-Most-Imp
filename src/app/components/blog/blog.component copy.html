@@ -1,0 +1,63 @@
+<div class="container mx-auto px-4 py-8">
+  <!-- Hero Section -->
+  <section class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-800">Welcome to Our Blog</h1>
+    <p class="text-gray-600 mt-2">Stay updated with the latest articles and news</p>
+  </section>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Blog Posts Section (Takes 3 columns on md+) -->
+    <div class="md:col-span-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Blog Card -->
+        <div *ngFor="let post of blogPosts" class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img [src]="post.image" alt="Blog image" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-lg font-semibold text-gray-800">{{ post.title }}</h2>
+            <p class="text-sm text-gray-500 mt-1">{{ post.date }}</p>
+            <p class="text-gray-600 mt-2">{{ post.excerpt }}</p>
+            <a [routerLink]="['/blog', post.id]" class="text-blue-500 mt-3 inline-block">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar (Takes 1 column on md+) -->
+    <div class="md:col-span-1">
+      <!-- Categories -->
+      <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+        <h3 class="text-lg font-semibold mb-4">Categories</h3>
+        <ul>
+          <li *ngFor="let category of categories" class="mb-2">
+            <a href="#" class="text-blue-500 hover:underline">{{ category }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold mb-4">Recent Posts</h3>
+        <ul>
+          <li *ngFor="let post of recentPosts" class="mb-3">
+            <a [routerLink]="['/blog', post.id]" class="text-blue-500 hover:underline">
+              {{ post.title }}
+            </a>
+            <p class="text-xs text-gray-500">{{ post.date }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+blogPosts = [
+    { id: 1, title: 'Exploring Angular 18', date: 'Feb 1, 2025', excerpt: 'A deep dive into the latest features of Angular.', image: 'https://source.unsplash.com/400x300/?technology' },
+    { id: 2, title: 'Tailwind CSS Tips', date: 'Jan 28, 2025', excerpt: 'How to create stunning UI using Tailwind CSS.', image: 'https://source.unsplash.com/400x300/?design' },
+    { id: 3, title: 'JavaScript Performance', date: 'Jan 20, 2025', excerpt: 'Improve your JavaScript performance with these tricks.', image: 'https://source.unsplash.com/400x300/?code' },
+  ];
+
+  categories = ['Technology', 'Web Development', 'Angular', 'CSS', 'JavaScript'];
+
+  recentPosts = [
+    { id: 4, title: 'Understanding RxJS in Angular', date: 'Jan 15, 2025' },
+    { id: 5, title: 'Mastering Material UI', date: 'Jan 10, 2025' },
+  ];
