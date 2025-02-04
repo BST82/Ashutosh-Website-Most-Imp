@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent {
-email:String="meAndmyPandit@gmail.com"
+email:String="info@meandmypandit.com"
 
 }
