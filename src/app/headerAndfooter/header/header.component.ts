@@ -36,7 +36,8 @@ export class HeaderComponent {
     // { label: 'Book-Pandit', link: '/book-pandit' },
     { label: 'Blog', link: '/blog' },
     { label: 'E-Puja', link: '/e-puja' },
-    { label: 'Contact', link: '/contact' }
+    { label: 'Contact', link: '/contact' },
+    { label: 'Special Dates', link: '/special-dates' }
   ];
 
   toggleNavbar() {
