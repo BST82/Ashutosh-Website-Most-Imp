@@ -6,6 +6,7 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { OurservicesComponent } from '../../features/ourservices/ourservices.component';
 import { BlogComponent } from '../blog/blog.component';
 import { EPujaComponent } from '../e-puja/e-puja.component';
+import { SpecialDatedComponent } from '../special-dated/special-dated.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent  }, 
   { path: 'e-puja', component: EPujaComponent  }, 
   { path: 'contact', component: ContactFormComponent }, 
+  { path: 'special-dates', component: SpecialDatedComponent }, 
 ];
 
 @NgModule({
