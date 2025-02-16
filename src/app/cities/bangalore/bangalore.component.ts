@@ -3,6 +3,8 @@ import { AfterBannerContactInfoComponent } from "../../components/after-banner-c
 import { BenefitsComponent } from "../../components/benefits/benefits.component";
 import { OurWorkComponent } from "../../components/our-work/our-work.component";
 import { TempleComponent } from "../../components/temple/temple.component";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-bangalore',
@@ -12,5 +14,11 @@ import { TempleComponent } from "../../components/temple/temple.component";
   styleUrl: './bangalore.component.scss'
 })
 export class BangaloreComponent {
+
+  constructor(private router: Router) {}
+
+  navigateToAnotherPage(route: string): void {
+    this.router.navigate([`/bangloreplaces/${route}`]);
+  }
 
 }

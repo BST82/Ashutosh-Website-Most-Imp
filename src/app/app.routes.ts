@@ -17,6 +17,11 @@ export const routes: Routes = [
     loadChildren: () => import('./cities/citi-modules/citi-modules.module')
       .then(mod => mod.CitiModulesModule)
   },
+  {
+    path: 'bangloreplaces',
+    loadChildren: () => import('./cities/bangalore/banglorePlaces/BangloreplacesModel/bangloreplaces.module')
+      .then(mod => mod.BangloreplacesModule)
+  }
 
   // other routes
 ];
