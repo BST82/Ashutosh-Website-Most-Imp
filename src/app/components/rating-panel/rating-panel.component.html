@@ -1,0 +1,109 @@
+<div class="flex bg-gray-100 py-10 px-5 md:px-20 justify-center mt-4">
+  
+    <!-- Main Content -->
+    <div class="w-full  bg-white shadow-lg rounded-lg p-6 ml-4">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">User Ratings & Reviews</h2>
+  
+      <!-- Rating Section -->
+      <div class="flex items-center justify-center mb-6 text-cente ">
+        <p class="text-xl font-semibold text-gray-700 mr-3">Overall Rating:</p>
+        <div class="flex items-center gap-1">
+          <span *ngFor="let star of getOverallRating()" class="text-yellow-400 text-xl">★</span>
+          <span *ngFor="let star of getRemainingRating()" class="text-gray-300 text-xl">★</span>
+        </div>      
+        <p class="ml-3 text-gray-600">({{ overallRating }}/5)</p>      
+      </div>
+  
+      <!-- Reviews Section -->
+      <div class="space-y-6 ">
+        <div *ngFor="let review of reviews" class="">
+          <h3 class='text-lg font-semibold text-gray-800'>{{ review.title }}</h3>        
+          <p>{{ review.content }}</p>
+          <div style='margin-top: .5rem'>
+            <span *ngFor="let star of getStars(review.rating)" style='color: gold;'>★</span> 
+            <span *ngFor="let star of getRemainingStars(review.rating)" style='color: lightgray;'>★</span> 
+          </div> 
+        </div>
+      </div>
+  
+      <!-- Call-to-action Button -->
+      <div class='mt-10 text-center'>
+        <button 
+          class='bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg shadow-md transition duration-300'>
+          Book Your Pandit Now
+        </button> 
+      </div>
+  
+    </div>
+  </div>
+  
+ 
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 mb-8">
+    <!-- Rating Card -->
+    <div class="bg-[#0a0a0a] border border-[#222222] rounded-lg max-w-xs mx-auto relative pb-4 mt-10">
+        <div class="relative rounded-full -top-10 left-2 w-20 h-20 -mb-6 flex items-center justify-center overflow-hidden">
+            <img src="assets/user.png" class="rounded-full h-16 w-16" />
+        </div>
+        <div class="absolute top-3 right-3 flex gap-0.5">
+            <span class="text-yellow-400">★★★★★</span>
+        </div>
+        <div class="text-base text-white font-light px-4">
+            The online pooja services provided were truly divine. The rituals were performed with great precision and devotion.
+        </div>
+        <div class="flex justify-between w-full px-4 text-sm mt-5">
+            <div class="text-zinc-400">Rahul Sharma</div>
+            <div class="text-zinc-700 text-xs">Spiritual Seeker</div>
+        </div>
+    </div>
+    
+    <div class="bg-[#0a0a0a] border border-[#222222] rounded-lg max-w-xs mx-auto relative pb-4 mt-10">
+        <div class="relative rounded-full -top-10 left-2 w-20 h-20 -mb-6 flex items-center justify-center overflow-hidden">
+            <img src="assets/user.png" class="rounded-full h-16 w-16" />
+        </div>
+        <div class="absolute top-3 right-3 flex gap-0.5">
+            <span class="text-yellow-400">★★★★</span>
+        </div>
+        <div class="text-base text-white font-light px-4">
+            The Pandit Ji conducted the pooja with great authenticity and explained every step. It was a truly enlightening experience.
+        </div>
+        <div class="flex justify-between w-full px-4 text-sm mt-5">
+            <div class="text-zinc-400">Anjali Verma</div>
+            <div class="text-zinc-700 text-xs">Devotee</div>
+        </div>
+    </div>
+
+    <div class="bg-[#0a0a0a] border border-[#222222] rounded-lg max-w-xs mx-auto relative pb-4 mt-10">
+        <div class="relative rounded-full -top-10 left-2 w-20 h-20 -mb-6 flex items-center justify-center overflow-hidden">
+            <img src="assets/user.png" class="rounded-full h-16 w-16" />
+        </div>
+        <div class="absolute top-3 right-3 flex gap-0.5">
+            <span class="text-yellow-400">★★★★★</span>
+        </div>
+        <div class="text-base text-white font-light px-4">
+            Highly professional service! The pooja was performed with great dedication, bringing peace and positivity to our home.
+        </div>
+        <div class="flex justify-between w-full px-4 text-sm mt-5">
+            <div class="text-zinc-400">Vikram Sinha</div>
+            <div class="text-zinc-700 text-xs">Businessman</div>
+        </div>
+    </div>
+
+    <div class="bg-[#0a0a0a] border border-[#222222] rounded-lg max-w-xs mx-auto relative pb-4 mt-10">
+        <div class="relative rounded-full -top-10 left-2 w-20 h-20 -mb-6 flex items-center justify-center overflow-hidden">
+            <img src="assets/user.png" class="rounded-full h-16 w-16" />
+        </div>
+        <div class="absolute top-3 right-3 flex gap-0.5">
+            <span class="text-yellow-400">★★★★</span>
+        </div>
+        <div class="text-base text-white font-light px-4">
+            A seamless and spiritual experience. Booking the pooja online was easy, and the entire ritual was performed flawlessly.
+        </div>
+        <div class="flex justify-between w-full px-4 text-sm mt-5">
+            <div class="text-zinc-400">Priya Mehta</div>
+            <div class="text-zinc-700 text-xs">Homemaker</div>
+        </div>
+    </div>
+</div>
+
+
