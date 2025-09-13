@@ -33,4 +33,7 @@ export class HomeSectionComponent implements OnInit {
       );
     }
   }
+  // ngAfterViewInit(): void {
+  //   AOS.init();
+  // }
 }

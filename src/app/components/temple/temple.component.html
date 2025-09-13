@@ -103,5 +103,83 @@
       </p>
     </div>
   </div>
+
+
+<!-- Shubh muhurt section -->
+<div class="px-4 py-8 max-w-7xl mx-auto space-y-10">
+
+  <!-- Header -->
+  <div class="text-center">
+    <h1 class="text-4xl font-extrabold text-purple-700 mb-2">🪔 Pooja Path Services</h1>
+    <p class="text-gray-600 text-lg">Spiritual services and auspicious Shubh Muhurats for July & August 2025</p>
+  </div>
+
+  <!-- Pooja Services Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-1">📿 Rudrabhishek</h2>
+      <p class="text-gray-600 text-sm">Performed during Sawan for Lord Shiva’s blessings. Ideal on Sawan Somwars.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-1">🪔 Satyanarayan Katha</h2>
+      <p class="text-gray-600 text-sm">Best performed on Purnima days like July 10 & August 9.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-1">🙏 Guru Purnima Pooja</h2>
+      <p class="text-gray-600 text-sm">Special offerings and prayers on July 10 to honor your Guru.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-1">🌿 Hariyali Teej</h2>
+      <p class="text-gray-600 text-sm">Auspicious festival for marital bliss and prosperity – July 27.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-indigo-700 mb-1">🐍 Nag Panchami</h2>
+      <p class="text-gray-600 text-sm">Worship serpent gods for protection and fertility – July 29.</p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr class="border-t border-gray-300">
+
+  <!-- Shubh Muhurat Calendar -->
+  <div class="max-w-7xl mx-auto p-6">
+  <!-- Blog Header -->
+  <h1 class="text-3xl font-bold text-center text-indigo-700 mb-6">
+    {{ blogTitle }}
+  </h1>
+
+  <!-- Loop through months -->
+  <div *ngFor="let item of muhuratData" 
+       class="mb-6 bg-white shadow-md rounded-2xl p-5 border border-gray-200 hover:shadow-lg transition">
+
+    <!-- Month -->
+    <h2 class="text-xl font-semibold text-indigo-600 mb-2">
+      {{ item.month }}
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-700 mb-2">
+      {{ item.description }}
+    </p>
+
+    <!-- Dates (if available) -->
+    <div *ngIf="item.dates" class="flex flex-wrap gap-2">
+      <span *ngFor="let date of item.dates" 
+            class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium shadow-sm">
+        {{ date }} November
+      </span>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+  <app-rating-panel/>
   
   <app-rating-panel/>
