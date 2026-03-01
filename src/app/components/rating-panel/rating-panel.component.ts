@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Add this
 
 @Component({
-  selector: 'app-rating-panel',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './rating-panel.component.html',
-  styleUrl: './rating-panel.component.scss'
+    selector: 'app-rating-panel',
+    standalone:true,
+    imports: [CommonModule],
+    templateUrl: './rating-panel.component.html',
+    styleUrl: './rating-panel.component.scss'
 })
 export class RatingPanelComponent {
 

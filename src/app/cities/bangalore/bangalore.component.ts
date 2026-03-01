@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-bangalore',
-  standalone: true,
-  imports: [AfterBannerContactInfoComponent, BenefitsComponent, OurWorkComponent, TempleComponent],
-  templateUrl: './bangalore.component.html',
-  styleUrl: './bangalore.component.scss'
+    selector: 'app-bangalore',
+    standalone:true,
+    imports: [AfterBannerContactInfoComponent, BenefitsComponent, OurWorkComponent, TempleComponent],
+    templateUrl: './bangalore.component.html',
+    styleUrl: './bangalore.component.scss'
 })
 export class BangaloreComponent {
 

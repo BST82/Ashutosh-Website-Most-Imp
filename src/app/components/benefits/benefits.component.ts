@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-benefits',
-  standalone: true,
-  imports: [],
-  templateUrl: './benefits.component.html',
-  styleUrl: './benefits.component.scss'
+    selector: 'app-benefits',
+    standalone:true,
+    imports: [],
+    templateUrl: './benefits.component.html',
+    styleUrl: './benefits.component.scss'
 })
 export class BenefitsComponent {
   constructor(private router: Router) {}

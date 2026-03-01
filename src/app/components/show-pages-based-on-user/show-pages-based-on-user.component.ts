@@ -4,11 +4,11 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-show-pages-based-on-user',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './show-pages-based-on-user.component.html',
-  styleUrls: ['./show-pages-based-on-user.component.scss']
+    selector: 'app-show-pages-based-on-user',
+    standalone:true,
+    imports: [CommonModule],
+    templateUrl: './show-pages-based-on-user.component.html',
+    styleUrls: ['./show-pages-based-on-user.component.scss']
 })
 export class ShowPagesBasedOnUserComponent implements OnInit {
 

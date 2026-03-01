@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 import { FeaturesModule } from '../../features/features/features.module';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, RouterOutlet, CommonModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    standalone:true,
+    imports: [RouterLink, RouterOutlet, CommonModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   isNavbarOpen = false;
